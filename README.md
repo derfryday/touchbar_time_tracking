@@ -8,6 +8,11 @@ Und das config file aus meiner Repo (dafür hab ich nen mini installer geschrieb
 MTMR kann ganz einfach mit brew installiert werden `brew cask install mtmr`
 Die Repo hier klonen `git clone git@gitlab.adup.euc1.lan:e.freitag/touchbar-zeittracking.git` und das `install.sh` file ausführen. Das Passwort wird im code gehashed und nur der Hash wird gespeichert.
 
+## Layout
+```
+[ ESC ] [ Display dunkler ] [ Display heller ] [ Spotify ]                          [ Lautsärke - ] [ Lautstärke + ] [ Multimedia play/pause ] [ Akku %] [ Zeittracking status ] [ Lock button ]
+```
+
 ## Warnung
 MTMR ersetzt die gesamte existierende Touchbar.
 Die "alte" Touchbar ist noch da und unverändert aber nicht Aktiv, ihr müsst MTMR nur beenden wenn ihr die alte Touchbar zurück haben wollt.
