@@ -53,7 +53,7 @@
     },
     "action": "shellScript",
     "executablePath": "/bin/bash",
-    "shellArguments": ["-c", "USERNAME=\"<USERNAME>\"; PASSWORD=\"<PASSWORD>\"; curl -S \"https://smalltime.adup-tech.com/track_time.php?name=$USERNAME&secret=$PASSWORD\";STATE=$(cat <STATE_PATH>/smalltime.state); [ $STATE == \"work\" ] && echo \"pause\" > <STATE_PATH>/smalltime.state || echo \"work\" > <STATE_PATH>smalltime.state"]
+    "shellArguments": ["-c", "USERNAME=\"<USERNAME>\"; PASSWORD=\"<PASSWORD>\"; curl -S \"https://smalltime.adup-tech.com/track_time.php?name=$USERNAME&secret=$PASSWORD\";STATE=$(cat <STATE_PATH>/smalltime.state); [ $STATE == \"work\" ] && echo \"pause\" > <STATE_PATH>/smalltime.state || echo \"work\" > <STATE_PATH>/smalltime.state"]
   },
   {
     "type": "staticButton",
