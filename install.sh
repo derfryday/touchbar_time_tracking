@@ -5,9 +5,8 @@ STATE_PATH=${STATE_PATH:-"$HOME/bin"}
 
 read -p "username: " USERNAME
 
-read -p "password (wird gehashed): " PASSWORD
-PASSWORD=$(echo "$PASSWORD" | sha1sum | awk '{print $1}')
-echo "password hash: $PASSWORD"
+echo "hash password at https://sha1generator.de/"
+read -p "password: " PASSWORD
 
 cp items.json.example items.json
 sed -i "" "s#<USERNAME>#$USERNAME#g" items.json
