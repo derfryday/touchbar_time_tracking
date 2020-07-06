@@ -49,7 +49,7 @@
     "refreshInterval": 1,
     "align": "right",
     "source": {
-        "inline": "cat <STATE_PATH>/smalltime.state"
+        "inline": "STATE=$(cat <STATE_PATH>/smalltime.state); [ $STATE == \"work\" ] && echo -e \"\\033[30;42mwork\" || echo -e \"\\033[30;41mpause\""
     },
     "action": "shellScript",
     "executablePath": "/bin/bash",
