@@ -11,9 +11,8 @@ Und das config file aus meiner Repo (dafür hab ich nen mini installer geschrieb
 3. Die Repo hier klonen `git clone git@gitlab.adup.euc1.lan:e.freitag/touchbar-zeittracking.git` und das `install.sh` file ausführen. Das Passwort wird im code gehashed und nur der Hash wird gespeichert.
 
 ## Layout
-```
-[ ESC ] [ Display dunkler ] [ Display heller ] [ Spotify ]                          [ Lautsärke - ] [ Lautstärke + ] [ Multimedia play/pause ] [ Akku %] [ Zeittracking status ] [ Lock button ]
-```
+![touchbar screenshot](https://gitlab.adup.euc1.lan/e.freitag/touchbar-zeittracking/-/raw/testing/touchbar_screenshot.png)
+
 
 ## Warnung
 MTMR ersetzt die gesamte existierende Touchbar.
