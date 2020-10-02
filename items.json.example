@@ -1,9 +1,5 @@
 [
-  {
-    "type": "escape",
-    "width": 64,
-    "align": "left"
-  },
+//ESCAPE
   { "type": "brightnessDown", "width": 32, "bordered": false, "align": "left" },
   { "type": "brightnessUp", "width": 32, "bordered": false, "align": "left" },
 
@@ -46,26 +42,24 @@
   },
   {
     "type": "shellScriptTitledButton",
-    "refreshInterval": 1,
+    "refreshInterval": 4,
     "align": "right",
     "source": {
-        "inline": "STATE=$(cat <STATE_PATH>/smalltime.state); [ $STATE == \"work\" ] && echo -e \"\\033[30;42mwork\" || echo -e \"\\033[30;41mpause\""
+        "inline": "STATE=$(INPUT_USERNAME='<USERNAME>'; PASSWORD='<PASSWORD>'; curl -S 'https://smalltime.adup.euc1.lan/display?user=$INPUT_USERNAME&password=$PASSWORD' || echo -e \"\\033[30;43mconnection issues\""
     },
     "action": "shellScript",
     "executablePath": "/bin/bash",
-    "shellArguments": ["-c", "USERNAME=\"<USERNAME>\"; PASSWORD=\"<PASSWORD>\"; curl -S \"https://smalltime.adup-tech.com/track_time.php?name=$USERNAME&secret=$PASSWORD\";STATE=$(cat <STATE_PATH>/smalltime.state); [ $STATE == \"work\" ] && echo \"pause\" > <STATE_PATH>/smalltime.state || echo \"work\" > <STATE_PATH>/smalltime.state"]
+    "shellArguments": ["-c", "INPUT_USERNAME='<USERNAME>'; PASSWORD='<PASSWORD>'; curl -S \"https://smalltime.adup-tech.com/track_time.php?name=$INPUT_USERNAME&secret=$PASSWORD\""]
   },
   {
     "type": "staticButton",
     "align": "right",
-    "title": "",
+    "title": "🔒 ",
     "width": 40,
+    "background": "#000000",
     "action": "appleScript",
     "actionAppleScript": {
         "inline": "tell application \"System Events\" to keystroke \"q\" using {control down, command down}"
-    },
-    "image": {
-        "base64": "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"
     }
   }
 ]
