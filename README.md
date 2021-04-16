@@ -6,7 +6,7 @@ Und das config file aus meiner Repo (dafür hab ich nen mini installer geschrieb
 
 ### Installation:
 
-1. MTMR kann ganz einfach mit brew installiert werden `brew cask install mtmr`
+1. MTMR kann ganz einfach mit brew installiert werden `brew install --cask mtmr`
 2. MTMR starten und Sicherheitsfreigaben für Automatisierung ersteilen (im [Confluence](https://adup-tech.atlassian.net/wiki/spaces/UA/pages/1635155969/Zeiterfassung) näher beschrieben)
 3. Die Repo hier klonen `git clone git@gitlab.adup.euc1.lan:e.freitag/touchbar-zeittracking.git` und das `install.sh` file ausführen. Das Passwort wird im code gehashed und nur der Hash wird gespeichert.
 
