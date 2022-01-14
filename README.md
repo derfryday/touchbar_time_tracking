@@ -11,7 +11,7 @@ Und das config file aus meiner Repo (dafür hab ich nen mini installer geschrieb
 3. Die Repo hier klonen `git clone git@github.com:derfryday/touchbar_time_tracking.git` und das `install.sh` file ausführen. Das Passwort wird im code gehashed und nur der Hash wird gespeichert.
 
 ## Layout
-![touchbar screenshot](git@github.com:derfryday/touchbar_time_tracking.git/-/raw/testing/touchbar_screenshot.png)
+![touchbar screenshot](touchbar_screenshot.png)
 
 
 ## Warnung
