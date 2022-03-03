@@ -45,7 +45,7 @@
     "refreshInterval": 4,
     "align": "right",
     "source": {
-        "inline": "STATE=$(FULLNAME='<FULLNAME>'; (curl -s 'https://smalltime.adup.euc1.lan/index.php' || echo \"connection issues\") | grep -Eo \"alert-success+\\\">${FULLNAME}\" >/dev/null && echo 'work' || echo 'pause'); [ $STATE == 'work' ] && echo -e \"\\033[30;42mwork\" || echo -e \"\\033[39;41mpause\""
+        "inline": "FULLNAME='<FULLNAME>'; ONLINE_STATE=$(curl -s 'https://smalltime.adup.euc1.lan/index.php' | grep -Eo \"alert-.*${FULLNAME}\"); if [[ \"$ONLINE_STATE\" == \"alert-success\\\">$FULLNAME\" ]]; then echo -e \"\\033[30;42mwork\"; elif [[ \"$ONLINE_STATE\" == \"alert-error\\\">$FULLNAME\" ]]; then echo -e \"\\033[39;41mpause\"; else echo -e \"\\033[30;43merror\"; fi"
     },
     "action": "shellScript",
     "executablePath": "/bin/bash",
